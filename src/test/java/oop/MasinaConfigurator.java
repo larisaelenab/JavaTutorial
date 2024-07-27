@@ -24,11 +24,43 @@ public class MasinaConfigurator {
 
     //Incapsulare = conceptul prin care putem sa setam anumite restrictii de vizibilitate pentru proprietati/metode
 
+
+    //polimorfism = conceptul prin care o metoda poate avea implementari diferite
+    //polimorfismul poate fi de 2 feluri: dinamic (override) si static (overload)
+    //polimorfism dinamic = intr-o ierarhie de clase obtinute prin mostenire, o metoda poate avea implementari diferite
+    //polimorfismul dinamic este prezent doar la mostenire
+    //polimorfism static = daca avem nevoie ca o metoda sa fie folosita in diferite circumstante,
+    //putem defini mai multe metode cu acelasi nume, avand nr de parametri/ tip de parametri diferiti
+
+
     public void infoMasina(){
         System.out.println("Marca masinii este: " + marca + ".");
         System.out.println("Modelul masinii este: " + model + ".");
         System.out.println("Anul masinii este: " + an + ".");
     }
+
+    //polimorfism dinamic
+    public void pornesteMotorul(){
+        System.out.println("Masina se porneste cu ajutorul cheii.");
+    }
+
+    public void deschidereGeam(){
+        System.out.println("Geamurile se deschid manual.");
+    }
+
+    //polimorfism static
+    public void promotieDacia(){
+        System.out.println("Pt luna iulie, Dacia nu are promotii.");
+    }
+
+    public void promotieDacia(String tichet){
+        System.out.println("Daca ai " + tichet +  ", primesti reducere.");
+    }
+
+    public void promotieDacia(Integer reducere){
+        System.out.println("In luna decembrie, masinile Dacia primesc " + reducere + " reducere.");
+    }
+
 
     public String getMarca() {
         return marca;
