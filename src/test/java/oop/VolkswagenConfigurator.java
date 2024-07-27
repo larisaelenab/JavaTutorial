@@ -40,6 +40,14 @@ public class VolkswagenConfigurator extends MasinaConfigurator {
         calculPretFinal();
     }
 
+    public void pornesteMotorul(){
+        System.out.println("Masina se porneste de la buton.");
+    }
+
+    public void deschidereGeam(){
+        System.out.println("Geamurile se deschid mixt.");
+    }
+
     //trebuie sa determinam pretul standard in functie de modelul masinii
     public void calculPretStandard(){
         if(getModel().equals("Polo")){
